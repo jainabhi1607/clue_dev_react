@@ -6,7 +6,8 @@ import User from '@/models/User';
 export async function GET() {
   try {
     await connectDB();
-    const users = await User.find({});
+    // Don't select password field for security
+    const users = await User.find({}).select('-password');
     return NextResponse.json({ success: true, data: users }, { status: 200 });
   } catch (error) {
     return NextResponse.json(

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
@@ -7,9 +9,17 @@ export default function Home() {
             <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Welcome to Clue
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
               Next.js + MongoDB + Vercel
             </p>
+            <div className="flex gap-4 justify-center">
+              <Link
+                href="/login"
+                className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg shadow-lg transition duration-150 transform hover:scale-105"
+              >
+                View Login Page
+              </Link>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">

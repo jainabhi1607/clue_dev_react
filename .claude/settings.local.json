@@ -9,7 +9,9 @@
       "Bash(vercel --version:*)",
       "Bash(vercel --yes:*)",
       "Bash(vercel login)",
-      "Bash(vercel env add:*)"
+      "Bash(vercel env add:*)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:staging.cluefinance.com.au)"
     ],
     "deny": [],
     "ask": []

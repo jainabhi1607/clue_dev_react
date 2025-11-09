@@ -10,7 +10,8 @@ export async function GET(
   try {
     await connectDB();
     const { id } = await params;
-    const user = await User.findById(id);
+    // Don't select password field for security
+    const user = await User.findById(id).select('-password');
 
     if (!user) {
       return NextResponse.json(
